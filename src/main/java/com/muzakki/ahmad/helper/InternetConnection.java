@@ -296,7 +296,7 @@ public class InternetConnection implements Handler.Callback{
             for(Map.Entry<String,String> header: headers.entrySet()){
                 httpConn.setRequestProperty(header.getKey(), header.getValue());
             }
-            httpConn.setConnectTimeout(Constant.TIMEOUT);
+            httpConn.setConnectTimeout(Config.TIMEOUT);
 
             String param = "";
             if(params!=null) {
@@ -390,7 +390,7 @@ public class InternetConnection implements Handler.Callback{
     }
 
     private HashMap<String,String> getHeaders(){
-        return Constant.getHeaders();
+        return Config.getHeaders();
     }
 
     public void addHeaders(String key,String value){
