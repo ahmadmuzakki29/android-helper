@@ -56,6 +56,7 @@ public class Config {
         try {
             return getInstance(ctx).getConfig().getString(key);
         } catch (JSONException e) {
+            e.printStackTrace();
             return null;
         }
     }
